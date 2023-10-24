@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/brands.min.css" />
@@ -14,15 +14,14 @@
 </head>
 <body>
     <section id="header">
-        <a href="#"><img src="./img/logo.png" class="logo" alt="anh logo"/></a>
+        <a href="#"><img src="../img/logo.png" class="logo" alt="anh logo"/></a>
         <div>
             <ul id="navbar">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="shop.html">Shop</li>
-                <li><a class="active" href="blog.html">Blog</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="shop.php">Shop</li>
+                <li><a class="active" href="blog.php">Blog</a></li>
+                <li><a href="contact.php">Contact</a></li>
+                <li><a href="cart.php"><i class="fa-solid fa-cart-shopping"></i></a></li>
             </ul>     
         </div>
     </section>
@@ -35,7 +34,7 @@
     <section id="blog">
         <div class="blog-box">
             <div class="blog-img">
-                <img src="img/blog/b1.jpg" alt="">
+                <img src="../img/blog/b1.jpg" alt="">
             </div>
             <div class="blog-details">
                 <h4>The Cotton-Jersey Zip-Up Hoodie</h4>
@@ -55,12 +54,12 @@
                     <a href="#">CONTINUE READING</a>
             </div>
             <div class="blog-img">
-                <img src="img/blog/b2.jpg" alt="">
+                <img src="../img/blog/b2.jpg" alt="">
             </div>
         </div>
         <div class="blog-box">
             <div class="blog-img">
-                <img src="img/blog/b3.jpg" alt="">
+                <img src="../img/blog/b3.jpg" alt="">
             </div>
             <div class="blog-details">
                 <h4>The Cotton-Jersey Zip-Up Hoodie</h4>
@@ -83,7 +82,7 @@
                     <a href="#">CONTINUE READING</a>
             </div>
             <div class="blog-img">
-                <img src="img/blog/b4.jpg" alt="">
+                <img src="../img/blog/b4.jpg" alt="">
             </div>
         </div>
     </section>
@@ -101,7 +100,7 @@
 
     <footer class="section-p1">
         <div class="col">
-            <img class="logo" src="img/logo.png" alt="">
+            <img class="logo" src="../img/logo.png" alt="">
             <h4>Contact</h4>
             <p><strong>Address:</strong> Ha Noi</p>
             <p><strong>Phone:</strong> 0123456789</p>
@@ -137,11 +136,11 @@
             <h4>Install App</h4>
             <p>Google Play || App Store</p>
             <div class="row">
-                <img src="img/pay/app.jpg" alt="">
-                <img src="img/pay/play.jpg" alt="">
+                <img src="../img/pay/app.jpg" alt="">
+                <img src="../img/pay/play.jpg" alt="">
             </div>
             <p>Secured Payment Gateways</p>
-            <img src="img/pay/pay.png" alt="">
+            <img src="../img/pay/pay.png" alt="">
         </div>
         <div class="copyright">
             <p>@PhamMinhQuan @NguyenManhQuan @NguyenThanhTong @MaiMinhTan</p>

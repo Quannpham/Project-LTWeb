@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/brands.min.css" />
@@ -14,60 +14,27 @@
 </head>
 <body>
     <section id="header">
-        <a href="#"><img src="./img/logo.png" class="logo" alt="anh logo"/></a>
+        <a href="#"><img src="../img/logo.png" class="logo" alt="anh logo"/></a>
         <div>
             <ul id="navbar">
-                <li><a class="active" href="index.html">Home</a></li>
-                <li><a href="shop.html">Shop</li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li><a href="index.php">Home</a></li>
+                <li><a class="active" href="shop.php">Shop</a></li>
+                <li><a href="blog.php">Blog</a></li>
+                <li><a href="contact.php">Contact</a></li>
+                <li><a href="cart.php"><i class="fa-solid fa-cart-shopping"></i></a></li>
             </ul>     
         </div>
     </section>
 
-    <section id="hero">
-        <h4>Trade in offer</h4>
-        <h2>Super value deals</h2>
-        <h1>On all products</h1>
+    <section id="page-header">
+        <h2>#Stay home</h2>
         <p>Save more with coupons & up to 70% off</p>
-        <button>Shop now</button>
-    </section>
-
-    <section id="feature" class="section-p1">
-        <div class="fe-box">
-            <img src="img/features/f1.png" alt=""/>
-            <h6>Free shipping</h6>
-        </div>
-        <div class="fe-box">
-            <img src="img/features/f2.png" alt=""/>
-            <h6>Online Order</h6>
-        </div>
-        <div class="fe-box">
-            <img src="img/features/f3.png" alt=""/>
-            <h6>Save Money</h6>
-        </div>
-        <div class="fe-box">
-            <img src="img/features/f4.png" alt=""/>
-            <h6>Promotions</h6>
-        </div>
-        <div class="fe-box">
-            <img src="img/features/f5.png" alt=""/>
-            <h6>Happy Sell</h6>
-        </div>
-        <div class="fe-box">
-            <img src="img/features/f6.png" alt=""/>
-            <h6>F24/7 Support</h6>
-        </div>
     </section>
 
     <section id="product1" class="section-p1">
-        <h2>Featured Products</h2>
-        <p>Summer Collection New Morden Design</p>
         <div class="pro-container">
-            <div class="pro">
-                <img src="img/products/f1.jpg" alt="" />
+            <div class="pro" onclick="window.location.href='product.php'">
+                <img src="../img/products/f1.jpg" alt="" />
                 <div class="des">
                     <span>adidas</span>
                     <h5>Cartoon Astronaut T-Shirts</h5>
@@ -83,7 +50,7 @@
                 <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
             </div>
             <div class="pro">
-                <img src="img/products/f2.jpg" alt="" />
+                <img src="../img/products/f2.jpg" alt="" />
                 <div class="des">
                     <span>adidas</span>
                     <h5>Cartoon Astronaut T-Shirts</h5>
@@ -99,7 +66,7 @@
                 <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
             </div>
             <div class="pro">
-                <img src="img/products/f3.jpg" alt="" />
+                <img src="../img/products/f3.jpg" alt="" />
                 <div class="des">
                     <span>adidas</span>
                     <h5>Cartoon Astronaut T-Shirts</h5>
@@ -115,7 +82,7 @@
                 <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
             </div>
             <div class="pro">
-                <img src="img/products/f4.jpg" alt="" />
+                <img src="../img/products/f4.jpg" alt="" />
                 <div class="des">
                     <span>adidas</span>
                     <h5>Cartoon Astronaut T-Shirts</h5>
@@ -131,7 +98,7 @@
                 <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
             </div>
             <div class="pro">
-                <img src="img/products/f5.jpg" alt="" />
+                <img src="../img/products/f5.jpg" alt="" />
                 <div class="des">
                     <span>adidas</span>
                     <h5>Cartoon Astronaut T-Shirts</h5>
@@ -147,7 +114,7 @@
                 <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
             </div>
             <div class="pro">
-                <img src="img/products/f6.jpg" alt="" />
+                <img src="../img/products/f6.jpg" alt="" />
                 <div class="des">
                     <span>adidas</span>
                     <h5>Cartoon Astronaut T-Shirts</h5>
@@ -163,7 +130,7 @@
                 <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
             </div>
             <div class="pro">
-                <img src="img/products/f7.jpg" alt="" />
+                <img src="../img/products/f7.jpg" alt="" />
                 <div class="des">
                     <span>adidas</span>
                     <h5>Cartoon Astronaut T-Shirts</h5>
@@ -179,7 +146,7 @@
                 <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
             </div>
             <div class="pro">
-                <img src="img/products/f8.jpg" alt="" />
+                <img src="../img/products/f8.jpg" alt="" />
                 <div class="des">
                     <span>adidas</span>
                     <h5>Cartoon Astronaut T-Shirts</h5>
@@ -194,21 +161,9 @@
                 </div>
                 <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
             </div> 
-        </div>
-    </section>
-
-    <section id="banner" class="section-m1">
-        <h4>Repair Services</h4>
-        <h2>Up to <span>70% Off</span> - All T-shirts & Accessories</h2>
-        <button class="normal">Explore More</button>
-    </section>
-
-    <section id="product1" class="section-p1">
-        <h2>New Arrivals</h2>
-        <p>Summer Collection New Morden Design</p>
-        <div class="pro-container">
+        
             <div class="pro">
-                <img src="img/products/n1.jpg" alt="" />
+                <img src="../img/products/n1.jpg" alt="" />
                 <div class="des">
                     <span>adidas</span>
                     <h5>Cartoon Astronaut T-Shirts</h5>
@@ -224,7 +179,7 @@
                 <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
             </div>
             <div class="pro">
-                <img src="img/products/n2.jpg" alt="" />
+                <img src="../img/products/n2.jpg" alt="" />
                 <div class="des">
                     <span>adidas</span>
                     <h5>Cartoon Astronaut T-Shirts</h5>
@@ -240,7 +195,7 @@
                 <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
             </div>
             <div class="pro">
-                <img src="img/products/n3.jpg" alt="" />
+                <img src="../img/products/n3.jpg" alt="" />
                 <div class="des">
                     <span>adidas</span>
                     <h5>Cartoon Astronaut T-Shirts</h5>
@@ -256,7 +211,7 @@
                 <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
             </div>
             <div class="pro">
-                <img src="img/products/n4.jpg" alt="" />
+                <img src="../img/products/n4.jpg" alt="" />
                 <div class="des">
                     <span>adidas</span>
                     <h5>Cartoon Astronaut T-Shirts</h5>
@@ -272,7 +227,7 @@
                 <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
             </div>
             <div class="pro">
-                <img src="img/products/n5.jpg" alt="" />
+                <img src="../img/products/n5.jpg" alt="" />
                 <div class="des">
                     <span>adidas</span>
                     <h5>Cartoon Astronaut T-Shirts</h5>
@@ -288,7 +243,7 @@
                 <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
             </div>
             <div class="pro">
-                <img src="img/products/n6.jpg" alt="" />
+                <img src="../img/products/n6.jpg" alt="" />
                 <div class="des">
                     <span>adidas</span>
                     <h5>Cartoon Astronaut T-Shirts</h5>
@@ -304,7 +259,7 @@
                 <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
             </div>
             <div class="pro">
-                <img src="img/products/n7.jpg" alt="" />
+                <img src="../img/products/n7.jpg" alt="" />
                 <div class="des">
                     <span>adidas</span>
                     <h5>Cartoon Astronaut T-Shirts</h5>
@@ -320,7 +275,7 @@
                 <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
             </div>
             <div class="pro">
-                <img src="img/products/n8.jpg" alt="" />
+                <img src="../img/products/n8.jpg" alt="" />
                 <div class="des">
                     <span>adidas</span>
                     <h5>Cartoon Astronaut T-Shirts</h5>
@@ -335,36 +290,6 @@
                 </div>
                 <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
             </div> 
-        </div>
-    </section>
-
-    <section id="sm-banner" class="section-p1">
-        <div class="banner-box">
-            <h4>crazy deals</h4>
-            <h2>buy 1 get 1 free</h2>
-            <span>The best classic dress is on sale at cara</span>
-            <button class="white">Learn more</button>
-        </div>
-        <div class="banner-box banner-box2">
-            <h4>Spring/Summer</h4>
-            <h2>upcomming season</h2>
-            <span>The best classic dress is on sale at cara</span>
-            <button class="white">Colletion</button>
-        </div>
-    </section>
-
-    <section id="banner3">
-        <div class="banner-box">
-            <h2>SEASONAL SALE</h2>
-            <h3>Winter Collection -50% OFF</h3>
-        </div>
-        <div class="banner-box banner-box2">
-            <h2>NEW FOOTWEAR COLLECTION</h2>
-            <h3>Spring/Summer 2023</h3>
-        </div>
-        <div class="banner-box banner-box3">
-            <h2>T-SHIRTS</h2>
-            <h3>New Trendy Prints</h3>
         </div>
     </section>
 
@@ -381,7 +306,7 @@
 
     <footer class="section-p1">
         <div class="col">
-            <img class="logo" src="img/logo.png" alt="">
+            <img class="logo" src="../img/logo.png" alt="">
             <h4>Contact</h4>
             <p><strong>Address:</strong> Ha Noi</p>
             <p><strong>Phone:</strong> 0123456789</p>
@@ -417,11 +342,11 @@
             <h4>Install App</h4>
             <p>Google Play || App Store</p>
             <div class="row">
-                <img src="img/pay/app.jpg" alt="">
-                <img src="img/pay/play.jpg" alt="">
+                <img src="../img/pay/app.jpg" alt="">
+                <img src="../img/pay/play.jpg" alt="">
             </div>
             <p>Secured Payment Gateways</p>
-            <img src="img/pay/pay.png" alt="">
+            <img src="../img/pay/pay.png" alt="">
         </div>
         <div class="copyright">
             <p>@PhamMinhQuan @NguyenManhQuan @NguyenThanhTong @MaiMinhTan</p>

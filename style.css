@@ -247,7 +247,7 @@ body {
 
 #product1 .pro .cart {
   width: 40px;
-  height: 40px;
+  height: 30px;
   line-height: 40px;
   border-radius: 50px;
   background-color: #e8f6ea;
@@ -589,7 +589,7 @@ footer a:hover {
 
 #prodetails .single-pro-details input{
   width: 50px;
-  height: 47px;
+  height: 45px;
   padding-left: 10px;
   font-size: 16px;
   margin-right: 10px;
@@ -633,7 +633,7 @@ footer a:hover {
 
 #blog img{
   width: 100%;
-  height: 300px;
+  height: 250px;
   object-fit: cover;
 }
 
@@ -680,7 +680,7 @@ footer a:hover {
 
 /* About page */
 #page-header{
-  background-image: url(img/about/banner.png);
+  background-image: url("img/about/banner.png");
 }
 
 #about-head{

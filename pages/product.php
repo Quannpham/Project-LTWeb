@@ -13,6 +13,24 @@
     <title>Project LapTrinhMang</title>
 </head>
 <body>
+    <?php 
+        session_start();
+        include("./admin/config.php");
+        $product;
+        $quantity = 0;
+
+        if (isset($_GET['id'])) {
+            $id = $_GET['id'];
+           
+            $query = "SELECT * FROM qls where id ='$id'";
+            $result = mysqli_query($conn, $query);
+            if (mysqli_num_rows($result) > 0) {
+                $product = mysqli_fetch_row($result);
+            } else {
+                echo "Không có kết quả.";
+            }
+          }
+    ?>
     <section id="header">
         <a href="#"><img src="../img/logo.png" class="logo" alt="anh logo"/></a>
         <div>

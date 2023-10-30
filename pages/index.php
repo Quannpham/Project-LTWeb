@@ -73,20 +73,16 @@
             <h6>F24/7 Support</h6>
         </div>
     </section>
-    
+<!--     
     <section id="product1" class="section-p1">
         <h2>Featured Products</h2>
         <p>Summer Collection New Morden Design</p>
         <div class="pro-container">
-        <?php 
-            foreach ($products as $i){
-                   
-         ?>
+      
              <div class="pro">
-                <img src="../img/<?php echo $i["images"]?>" alt="" />
+             
                 <div class="des">
-                    <span><?php echo $i["brand"]?></span>
-                    <h5><?php echo $i["name"]?></h5>
+                 
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -94,13 +90,13 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4><?php echo $i["price"]?><strong>$</strong></h4>
+                 
                 </div>
                 <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
             </div>
-                <?php } ?>
+              
         </div>
-    </section>
+    </section> -->
 
     <section id="banner" class="section-m1">
         <h4>Repair Services</h4>
@@ -115,22 +111,24 @@
         <?php 
             foreach ($products as $i){          
          ?>
-            <div class="pro">
-                <img src="../img/<?php echo $i["images"]?>" alt="" />
-                <div class="des">
-                    <span><?php echo $i["brand"]?></span>
-                    <h5><?php echo $i["name"]?></h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+           <a href="product.php?id=<?php echo($i["id"])?>">
+                <div class="pro">
+                    <img src="../img/<?php echo $i["images"]?>" alt="" />
+                    <div class="des">
+                        <span><?php echo $i["brand"]?></span>
+                        <h5><?php echo $i["name"]?></h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4><?php echo $i["price"]?><strong>$</strong></h4>
                     </div>
-                    <h4><?php echo $i["price"]?><strong>$</strong></h4>
+                    <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
                 </div>
-                <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
-            </div>
+            </a>
             <?php } ?>
         </div>
     </section>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../style.css">
@@ -12,27 +13,40 @@
 
     <title>Project LapTrinhMang</title>
 </head>
-<body>
-    <?php 
-        session_start();
-        include("./admin/config.php");
-        $product;
-        $quantity = 0;
 
-        if (isset($_GET['id'])) {
-            $id = $_GET['id'];
-           
-            $query = "SELECT * FROM qls where id ='$id'";
-            $result = mysqli_query($conn, $query);
-            if (mysqli_num_rows($result) > 0) {
-                $product = mysqli_fetch_row($result);
-            } else {
-                echo "Không có kết quả.";
-            }
-          }
+<body>
+    <?php
+    $total = 0;
+    $number = 0;
+
+    if (isset($_POST["increase"])) {
+        $number = $_POST["number"];
+        $number += 1 ;
+        $price = $_POST["price"];
+        $total = $number * $price;
+    }
+    ?>
+    <?php
+    session_start();
+    require_once(__DIR__ . "/../admin/config.php");
+    $product;
+    $quantity = 0;
+
+    if (isset($_GET['id'])) {
+        $id = $_GET['id'];
+
+        $query = "SELECT * FROM qls where id ='$id'";
+        $products = array();
+        $stmt = $conn->prepare($query);
+        $stmt->execute();
+        $rs = $stmt->get_result();
+        while ($row = $rs->fetch_assoc()) {
+            $products[] = $row;
+        }
+    }
     ?>
     <section id="header">
-        <a href="#"><img src="../img/logo.png" class="logo" alt="anh logo"/></a>
+        <a href="#"><img src="../img/logo.png" class="logo" alt="anh logo" /></a>
         <div>
             <ul id="navbar">
                 <li><a href="index.php">Home</a></li>
@@ -40,54 +54,46 @@
                 <li><a href="blog.php">Blog</a></li>
                 <li><a href="contact.php">Contact</a></li>
                 <li><a href="cart.php"><i class="fa-solid fa-cart-shopping"></i></a></li>
-            </ul>     
-        </div>
-    </section>
-    
-    <section class="section-p1" id="prodetails">
-        <div class="single-pro-image">
-            <img src="../img/products/f1.jpg" width="100%" id="MainImg" alt="">
-            <div class="small-img-group">
-                <div class="small-img-col" onclick="firstItem()">
-                    <img src="../img/products/f1.jpg" width="100%" class="small-img" alt="">
-                </div>
-                <div class="small-img-col" onclick="secondItem()">
-                    <img src="../img/products/f2.jpg" width="100%" class="small-img" alt="">
-                </div>
-                <div class="small-img-col" onclick="thirdItem()">
-                    <img src="../img/products/f3.jpg" width="100%" class="small-img" alt="">
-                </div>
-                <div class="small-img-col" onclick="fourthItem()">
-                    <img src="../img/products/f4.jpg" width="100%" class="small-img" alt="">
-                </div>
-            </div>
-        </div>
-        <div class="single-pro-details">
-            <h6>Home/ T-Shirt</h6>
-            <h4>Men's Fashion T Shirt</h4>
-            <h2>$999</h2>
-            <select>
-                <option>Select size</option>
-                <option>S</option>
-                <option>M</option>
-                <option>L</option>
-                <option>XL</option>
-                <option>XXL</option>
-            </select>
-            <input type="number" value="1">
-            <button class="normal">Add to Cart</button>
-            <h4>Product Detail</h4>
-            <span>Lorem ipsum dolor sit 
-                amet consectetur adipisicing elit. 
-                Quasi quod mollitia fugiat, nihil con
-                sectetur a doloremque, laudantium vel r
-                em, natus tempore. Pariatur reprehender
-                it saepe voluptatum id eligendi recusan
-                dae magni atque.</span>
+            </ul>
         </div>
     </section>
 
-    <section id="product1" class="section-p1">
+    <section class="section-p1" id="prodetails">
+        <?php
+        foreach ($products as $i) {
+        ?>
+            <div class="single-pro-image">
+                <img src="../img/<?php echo $i["images"] ?>" width="100%" id="MainImg" alt="">
+
+            </div>
+
+            <div class="single-pro-details">
+                <h6><?php echo $i["brand"] ?></h6>
+                <h4><?php echo $i["name"] ?></h4>
+               
+                <select>
+                    <option>Select size</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                    <option>XXL</option>
+                </select>
+                <form action="" method="POST"> 
+                    <input value="<?php echo $i["price"] ?>" name="price">$</input>
+                    <button type="text" name="increase">cong</button>
+                    <input type="number" value="<?php echo $number ?>" name="number">
+                    <input type="text" name="total" value="<?php echo $total ?>">
+                    <button name="addToCart" class="normal">Add to Cart</button>
+                </form>
+
+                <h4>Product Detail</h4>
+                <span><?php echo $i["description"] ?></span>
+            </div>
+        <?php } ?>
+    </section>
+
+    <!-- <section id="product1" class="section-p1">
         <h2>Feature Products</h2>
         <p>Summer Collection New Morden Design</p>
         <div class="pro-container">
@@ -155,8 +161,8 @@
                 </div>
                 <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
             </div>
-        </div>
-    </section>
+        </div> -->
+    <!-- </section> -->
 
     <section id="newsletter" class="section-p1 section-m1">
         <div class="newstext">
@@ -183,7 +189,7 @@
                     <a href="http://youtube.com"><i class="fa-brands fa-youtube"></i></a>
                     <a href="http://instagram.com"><i class="fa-brands fa-instagram"></i></a>
                     <a href="http://twitter.com"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="http://twitch.com"><i class="fa-brands fa-twitch"></i></a> 
+                    <a href="http://twitch.com"><i class="fa-brands fa-twitch"></i></a>
                 </div>
             </div>
         </div>
@@ -221,8 +227,8 @@
     <script>
         const MainImg = document.getElementById("MainImg");
         const smallImg = document.getElementsByClassName("small-img");
-        
-        const firstItem = () => {  
+
+        const firstItem = () => {
             smallImg[0].src;
             MainImg.src = smallImg[0].src
         }
@@ -240,4 +246,5 @@
         }
     </script>
 </body>
+
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../style.css">
@@ -12,9 +13,55 @@
 
     <title>Project LapTrinhMang</title>
 </head>
+
 <body>
+    <?php
+    $price = 0;
+     $name;
+         $price;
+         $image;
+         $idProduct;
+    session_start();
+    require_once(__DIR__ . "/../admin/config.php");
+    if (isset($_GET['id'])) {
+        $id = $_GET['id'];
+        echo $id;
+        $query = "SELECT * FROM qls WHERE id=$id";
+        $products = array();
+        $stmt = $conn->prepare($query);
+        $stmt->execute();
+        $rs = $stmt->get_result();
+        while ($row = $rs->fetch_assoc()) {
+            $products[] = $row;
+        }
+        $name = "";
+        $price = "";
+        $image = "";
+        $idProduct = "";
+
+        foreach ($products as $i) {
+            $name = $i["name"];
+            $price = $i["price"];
+            $image = $i["images"];
+            $idProduct = $i["id"];
+        }
+        
+    }
+    
+    $prices = $price ;
+    $number = $_POST["number"];
+    if (isset($_POST["increase"])) {
+        $number++;
+    }
+    if (isset($_POST["decrease"])) {
+        $number--;
+    }
+    $total = $prices * $number;
+    $sql = "INSERT INTO cart (name, price, quantity, total, image, id) values ($name, $price,$quantity, $total, $image, $id)";
+
+    ?>
     <section id="header">
-        <a href="#"><img src="../img/logo.png" class="logo" alt="anh logo"/></a>
+        <a href="#"><img src="../img/logo.png" class="logo" alt="anh logo" /></a>
         <div>
             <ul id="navbar">
                 <li><a href="index.php">Home</a></li>
@@ -22,7 +69,7 @@
                 <li><a href="blog.php">Blog</a></li>
                 <li><a href="contact.php">Contact</a></li>
                 <li><a class="active" href="cart.php"><i class="fa-solid fa-cart-shopping"></i></a></li>
-            </ul>     
+            </ul>
         </div>
     </section>
 
@@ -48,11 +95,15 @@
                     <td><a href="#"><i class="fa-sharp fa-regular fa-circle"></i></a></td>
                     <td><img src="../img/products/f1.jpg" alt=""></td>
                     <td>Cartoon Astronaut T-Shirt</td>
-                    <td>$99</td>
-                    <td><input type="number" value="1"></td>
-                    <td>$99</td>
-                </tr>
-                <tr>
+                    <form action="" method="POST">
+                        <input value="<?php echo $prices ?>" name="prices"></input>
+                        <button name="increase">+</button>
+                        <button name="decrease">-</button>
+                        <input type="number" value="<?php echo $number ?>" name="number">
+                        <input value="<?php echo $total ?>" name="total">$</input>
+                    </form>
+
+                    <!-- <tr>
                     <td><a href="#"><i class="fa-sharp fa-regular fa-circle"></i></a></td>
                     <td><img src="../img/products/f2.jpg" alt=""></td>
                     <td>Cartoon Astronaut T-Shirt</td>
@@ -75,7 +126,7 @@
                     <td>$99</td>
                     <td><input type="number" value="1"></td>
                     <td>$99</td>
-                </tr>
+                </tr> -->
             </tbody>
         </table>
     </section>
@@ -122,7 +173,7 @@
                     <a href="http://youtube.com"><i class="fa-brands fa-youtube"></i></a>
                     <a href="http://instagram.com"><i class="fa-brands fa-instagram"></i></a>
                     <a href="http://twitter.com"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="http://twitch.com"><i class="fa-brands fa-twitch"></i></a> 
+                    <a href="http://twitch.com"><i class="fa-brands fa-twitch"></i></a>
                 </div>
             </div>
         </div>
@@ -159,4 +210,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>

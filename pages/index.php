@@ -126,7 +126,7 @@
                         </div>
                         <h4><?php echo $i["price"]?><strong>$</strong></h4>
                     </div>
-                    <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
+                    <a href="cart.php?id=<?php echo($i["id"])?>"><i class="fas fa-shopping-cart cart"></i></a>
                 </div>
             </a>
             <?php } ?>

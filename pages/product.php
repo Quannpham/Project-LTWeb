@@ -31,7 +31,6 @@
     require_once(__DIR__ . "/../admin/config.php");
     $product;
     $quantity = 0;
-
     if (isset($_GET['id'])) {
         $id = $_GET['id'];
 
@@ -43,6 +42,7 @@
         while ($row = $rs->fetch_assoc()) {
             $products[] = $row;
         }
+        print_r($products);
     }
     ?>
     <section id="header">

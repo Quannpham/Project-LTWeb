@@ -17,10 +17,10 @@
 <body>
     <?php
     $price = 0;
-     $name;
-         $price;
-         $image;
-         $idProduct;
+    $name;
+    $discount;
+    $image;
+    $idProduct;
     session_start();
     require_once(__DIR__ . "/../admin/config.php");
     if (isset($_GET['id'])) {
@@ -35,20 +35,19 @@
             $products[] = $row;
         }
         $name = "";
-        $price = "";
+        $discount = "";
         $image = "";
         $idProduct = "";
 
         foreach ($products as $i) {
             $name = $i["name"];
-            $price = $i["price"];
+            $discount = $i["discount"];
             $image = $i["images"];
             $idProduct = $i["id"];
         }
-        
     }
-    
-    $prices = $price ;
+
+    $prices = $price;
     $number = $_POST["number"];
     if (isset($_POST["increase"])) {
         $number++;
@@ -57,7 +56,7 @@
         $number--;
     }
     $total = $prices * $number;
-    $sql = "INSERT INTO cart (name, price, quantity, total, image, id) values ($name, $price,$quantity, $total, $image, $id)";
+    $sql = "INSERT INTO cart (name, quantity, total, image, id, discount) values ($name,$quantity, $total, $image, $id, $discount)";
 
     ?>
     <section id="header">
@@ -94,39 +93,18 @@
                 <tr>
                     <td><a href="#"><i class="fa-sharp fa-regular fa-circle"></i></a></td>
                     <td><img src="../img/products/f1.jpg" alt=""></td>
-                    <td>Cartoon Astronaut T-Shirt</td>
-                    <form action="" method="POST">
-                        <input value="<?php echo $prices ?>" name="prices"></input>
-                        <button name="increase">+</button>
-                        <button name="decrease">-</button>
-                        <input type="number" value="<?php echo $number ?>" name="number">
-                        <input value="<?php echo $total ?>" name="total">$</input>
-                    </form>
+                    <td><?php echo $id ?></td>
+                    <td>
+                        <form action="" method="POST">
+                            <input value="<?php echo $discount ?>" name="discount"></input>
+                            <button name="increase">+</button>
+                            <button name="decrease">-</button>
+                            <input type="number" value="<?php echo $number ?>" name="number">
+                            <input value="<?php echo $total ?>" name="total">$</input>
+                        </form>
+                    </td>
 
-                    <!-- <tr>
-                    <td><a href="#"><i class="fa-sharp fa-regular fa-circle"></i></a></td>
-                    <td><img src="../img/products/f2.jpg" alt=""></td>
-                    <td>Cartoon Astronaut T-Shirt</td>
-                    <td>$99</td>
-                    <td><input type="number" value="1"></td>
-                    <td>$99</td>
                 </tr>
-                <tr>
-                    <td><a href="#"><i class="fa-sharp fa-regular fa-circle"></i></a></td>
-                    <td><img src="../img/products/f3.jpg" alt=""></td>
-                    <td>Cartoon Astronaut T-Shirt</td>
-                    <td>$99</td>
-                    <td><input type="number" value="1"></td>
-                    <td>$99</td>
-                </tr>
-                <tr>
-                    <td><a href="#"><i class="fa-sharp fa-regular fa-circle"></i></a></td>
-                    <td><img src="../img/products/f4.jpg" alt=""></td>
-                    <td>Cartoon Astronaut T-Shirt</td>
-                    <td>$99</td>
-                    <td><input type="number" value="1"></td>
-                    <td>$99</td>
-                </tr> -->
             </tbody>
         </table>
     </section>

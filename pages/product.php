@@ -18,12 +18,13 @@
     <?php
     $total = 0;
     $number = 0;
+    $discount;
 
     if (isset($_POST["increase"])) {
         $number = $_POST["number"];
-        $number += 1 ;
-        $price = $_POST["price"];
-        $total = $number * $price;
+        $number += 1;
+        $discount = $_POST["discount"];
+        $total = $number * $discount;
     }
     ?>
     <?php
@@ -42,7 +43,6 @@
         while ($row = $rs->fetch_assoc()) {
             $products[] = $row;
         }
-        print_r($products);
     }
     ?>
     <section id="header">
@@ -50,7 +50,7 @@
         <div>
             <ul id="navbar">
                 <li><a href="index.php">Home</a></li>
-                <li><a class="active" href="shop.php">Shop</li>
+                <li><a href="shop.php">Shop</li>
                 <li><a href="blog.php">Blog</a></li>
                 <li><a href="contact.php">Contact</a></li>
                 <li><a href="cart.php"><i class="fa-solid fa-cart-shopping"></i></a></li>
@@ -70,7 +70,7 @@
             <div class="single-pro-details">
                 <h6><?php echo $i["brand"] ?></h6>
                 <h4><?php echo $i["name"] ?></h4>
-               
+
                 <select>
                     <option>Select size</option>
                     <option>S</option>
@@ -79,11 +79,12 @@
                     <option>XL</option>
                     <option>XXL</option>
                 </select>
-                <form action="" method="POST"> 
+                <form action="" method="POST">
                     <input value="<?php echo $i["price"] ?>" name="price">$</input>
-                    <button type="text" name="increase">cong</button>
+                    <input type="text" name="discount" value="<?php echo $i["discount"] ?>" />$
                     <input type="number" value="<?php echo $number ?>" name="number">
                     <input type="text" name="total" value="<?php echo $total ?>">
+                    <button type="submit" name="increase">cong</button>
                     <button name="addToCart" class="normal">Add to Cart</button>
                 </form>
 
@@ -92,77 +93,6 @@
             </div>
         <?php } ?>
     </section>
-
-    <!-- <section id="product1" class="section-p1">
-        <h2>Feature Products</h2>
-        <p>Summer Collection New Morden Design</p>
-        <div class="pro-container">
-            <div class="pro">
-                <img src="../img/products/n1.jpg" alt="" />
-                <div class="des">
-                    <span>adidas</span>
-                    <h5>Cartoon Astronaut T-Shirts</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>$999</h4>
-                </div>
-                <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="../img/products/n2.jpg" alt="" />
-                <div class="des">
-                    <span>adidas</span>
-                    <h5>Cartoon Astronaut T-Shirts</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>$999</h4>
-                </div>
-                <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="../img/products/n3.jpg" alt="" />
-                <div class="des">
-                    <span>adidas</span>
-                    <h5>Cartoon Astronaut T-Shirts</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>$999</h4>
-                </div>
-                <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
-            </div>
-            <div class="pro">
-                <img src="../img/products/n4.jpg" alt="" />
-                <div class="des">
-                    <span>adidas</span>
-                    <h5>Cartoon Astronaut T-Shirts</h5>
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h4>$999</h4>
-                </div>
-                <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
-            </div>
-        </div> -->
-    <!-- </section> -->
 
     <section id="newsletter" class="section-p1 section-m1">
         <div class="newstext">
@@ -223,28 +153,6 @@
             <p>@PhamMinhQuan @NguyenManhQuan @NguyenThanhTong @MaiMinhTan</p>
         </div>
     </footer>
-
-    <script>
-        const MainImg = document.getElementById("MainImg");
-        const smallImg = document.getElementsByClassName("small-img");
-
-        const firstItem = () => {
-            smallImg[0].src;
-            MainImg.src = smallImg[0].src
-        }
-        const secondItem = () => {
-            smallImg[1].src;
-            MainImg.src = smallImg[1].src
-        }
-        const thirdItem = () => {
-            smallImg[2].src;
-            MainImg.src = smallImg[2].src
-        }
-        const fourthItem = () => {
-            smallImg[3].src;
-            MainImg.src = smallImg[3].src
-        }
-    </script>
 </body>
 
 </html>

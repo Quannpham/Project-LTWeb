@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../style.css">
@@ -10,24 +11,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/regular.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/solid.min.css" />
 
-    <title>        
-   </title>
+    <title>
+    </title>
 </head>
+
 <body>
-    
+
     <?php
-         require_once(__DIR__."/../admin/config.php");
-         $query = "SELECT * FROM qls";
-         $products = array();
-         $stmt = $conn->prepare($query);
-         $stmt->execute();
-         $rs = $stmt->get_result();
-         while($row = $rs->fetch_assoc()){
-            $products[] = $row;
-         }
+    require_once(__DIR__ . "/../admin/config.php");
+    $query = "SELECT * FROM qls";
+    $products = array();
+    $stmt = $conn->prepare($query);
+    $stmt->execute();
+    $rs = $stmt->get_result();
+    while ($row = $rs->fetch_assoc()) {
+        $products[] = $row;
+    }
     ?>
     <section id="header">
-        <a href="#"><img src="../img/logo.png" class="logo" alt="anh logo"/></a>
+        <a href="#"><img src="../img/logo.png" class="logo" alt="anh logo" /></a>
         <div>
             <ul id="navbar">
                 <li><a class="active" href="index.php">Home</a></li>
@@ -35,7 +37,7 @@
                 <li><a href="blog.php">Blog</a></li>
                 <li><a href="contact.php">Contact</a></li>
                 <li><a href="cart.php"><i class="fa-solid fa-cart-shopping"></i></a></li>
-            </ul>     
+            </ul>
         </div>
     </section>
 
@@ -49,54 +51,30 @@
 
     <section id="feature" class="section-p1">
         <div class="fe-box">
-            <img src="../img/features/f1.png" alt=""/>
+            <img src="../img/features/f1.png" alt="" />
             <h6>Free shipping</h6>
         </div>
         <div class="fe-box">
-            <img src="../img/features/f2.png" alt=""/>
+            <img src="../img/features/f2.png" alt="" />
             <h6>Online Order</h6>
         </div>
         <div class="fe-box">
-            <img src="../img/features/f3.png" alt=""/>
+            <img src="../img/features/f3.png" alt="" />
             <h6>Save Money</h6>
         </div>
         <div class="fe-box">
-            <img src="../img/features/f4.png" alt=""/>
+            <img src="../img/features/f4.png" alt="" />
             <h6>Promotions</h6>
         </div>
         <div class="fe-box">
-            <img src="../img/features/f5.png" alt=""/>
+            <img src="../img/features/f5.png" alt="" />
             <h6>Happy Sell</h6>
         </div>
         <div class="fe-box">
-            <img src="../img/features/f6.png" alt=""/>
+            <img src="../img/features/f6.png" alt="" />
             <h6>F24/7 Support</h6>
         </div>
     </section>
-<!--     
-    <section id="product1" class="section-p1">
-        <h2>Featured Products</h2>
-        <p>Summer Collection New Morden Design</p>
-        <div class="pro-container">
-      
-             <div class="pro">
-             
-                <div class="des">
-                 
-                    <div class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                 
-                </div>
-                <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
-            </div>
-              
-        </div>
-    </section> -->
 
     <section id="banner" class="section-m1">
         <h4>Repair Services</h4>
@@ -108,27 +86,28 @@
         <h2>New Arrivals</h2>
         <p>Summer Collection New Morden Design</p>
         <div class="pro-container">
-        <?php 
-            foreach ($products as $i){          
-         ?>
-           <a href="product.php?id=<?php echo($i["id"])?>">
-                <div class="pro">
-                    <img src="../img/<?php echo $i["images"]?>" alt="" />
-                    <div class="des">
-                        <span><?php echo $i["brand"]?></span>
-                        <h5><?php echo $i["name"]?></h5>
-                        <div class="star">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+            <?php
+            foreach ($products as $i) {
+            ?>
+                <a href="product.php?id=<?php echo ($i["id"]) ?>">
+                    <div class="pro">
+                        <img src="../img/<?php echo $i["images"] ?>" alt="" />
+                        <div class="des">
+                            <span><?php echo $i["brand"] ?></span>
+                            <h5><?php echo $i["name"] ?></h5>
+                            <div class="star">
+                                <i class="fas fa-star" style="color:darkgoldenrod"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4><?php echo $i["price"] ?><strong>$</strong></h4>
+                            <h4><?php echo $i["discount"] ?><strong>$</strong></h4>
                         </div>
-                        <h4><?php echo $i["price"]?><strong>$</strong></h4>
+                        <a href="cart.php?id=<?php echo ($i["id"]) ?>"><i class="fas fa-shopping-cart cart"></i></a>
                     </div>
-                    <a href="cart.php?id=<?php echo($i["id"])?>"><i class="fas fa-shopping-cart cart"></i></a>
-                </div>
-            </a>
+                </a>
             <?php } ?>
         </div>
     </section>
@@ -188,7 +167,7 @@
                     <a href="http://youtube.com"><i class="fa-brands fa-youtube"></i></a>
                     <a href="http://instagram.com"><i class="fa-brands fa-instagram"></i></a>
                     <a href="http://twitter.com"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="http://twitch.com"><i class="fa-brands fa-twitch"></i></a> 
+                    <a href="http://twitch.com"><i class="fa-brands fa-twitch"></i></a>
                 </div>
             </div>
         </div>
@@ -225,4 +204,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>

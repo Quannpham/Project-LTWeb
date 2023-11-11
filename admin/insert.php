@@ -18,6 +18,7 @@
     $description = "";
     $filename = "";
     $brand = "";
+    $discount = "";
 
     if (isset($_POST["submit"])) {
         $filename = $_FILES["uploadFile"]["name"];
@@ -28,13 +29,14 @@
         $price = $_POST["price"];
         $description = $_POST["description"];
         $brand = $_POST["brand"];
+        $discount = $_POST["discount"];
 
-        $sql = "INSERT INTO qls (name,price,description,images,brand) VALUES ('$name','$price','$description','$filename','$brand')";
+        $sql = "INSERT INTO qls (name,price,description,images,brand,discount) VALUES ('$name','$price','$description','$filename','$brand','$discount')";
         mysqli_query($conn, $sql);
         if (move_uploaded_file($tempname, $folder)) {
-            echo "<script>alert('Image uploaded successfully!');</script>";
+            echo "<script>alert('Product uploaded successfully!');</script>";
         } else {
-            echo "<script>alert('Image uploaded falied!');</script>";
+            echo "<script>alert('Product uploaded falied!');</script>";
         }
     }
 
@@ -44,13 +46,11 @@
         echo '<input type="submit" name="edit" value="Sửa">';
         echo '</form>';
     }
- 
 
-    // Xử lý khi người dùng gửi ID ảnh để sửa
+
     if (isset($_POST["edit"])) {
         $editId = $_POST["edit_id"];
 
-        // Kiểm tra xem ID ảnh có tồn tại trong cơ sở dữ liệu hay không
         $sql = "SELECT * FROM qls WHERE id = '$editId'";
         $result = mysqli_query($conn, $sql);
 
@@ -60,15 +60,16 @@
             $price = $row["price"];
             $description = $row["description"];
             $brand = $row["brand"];
+            $discount = $row["discount"];
             $filename = $row["images"];
 
-            // Hiển thị form để sửa thông tin ảnh
             echo '<form action="" method="POST">';
             echo 'ID ảnh: <input type="text" name="update_id" value="' . $editId . '" readonly><br>';
             echo 'Tên ảnh: <input type="text" name="name" value="' . $name . '"><br>';
             echo 'Giá: <input type="text" name="price" value="' . $price . '"><br>';
             echo 'Mô tả: <textarea name="description">' . $description . '</textarea><br>';
             echo 'Thương hiệu: <input type="text" name="brand" value="' . $brand . '"><br>';
+            echo 'Khuyến mại:<input type="text" name="discount" value=' . $discount . '"><br>';
             echo '<input type="submit" name="update" value="Cập nhật">';
             echo '</form>';
         } else {
@@ -83,9 +84,10 @@
         $price = $_POST["price"];
         $description = $_POST["description"];
         $brand = $_POST["brand"];
+        $discount = $_POST["discount"];
 
         // Cập nhật thông tin ảnh trong cơ sở dữ liệu
-        $sql = "UPDATE qls SET name='$name', price='$price', description='$description', brand='$brand' WHERE id='$updateId'";
+        $sql = "UPDATE qls SET name='$name', price='$price', description='$description', brand='$brand', discount='$discount' WHERE id='$updateId'";
         mysqli_query($conn, $sql);
 
         echo "<script>alert('Thông tin ảnh đã được cập nhật thành công!');</script>";
@@ -130,6 +132,12 @@
                             Thương hiệu
                         </label>
                         <input class="form-control" type="text" name="brand" value="<?php echo $brand ?>" />
+                    </div>
+                    <div class="col-6 mb-3">
+                        <label class="form-label">
+                            Khuyến mại
+                        </label>
+                        <input class="form-control" type="text" name="discount" value="<?php echo $discount ?>" />
                     </div>
                     <div class="col-6 mb-3">
                         <label class="form-label">

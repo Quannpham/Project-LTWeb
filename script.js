@@ -48,3 +48,12 @@ const login = () => {
     alert("Tai khoan hoac mat khau sai");
   }
 };
+
+const checkOut = () => {
+  alert("Mua hang thanh cong");
+}
+
+const preventForm = (event) => {
+    event.preventDefault();
+    alert("Them vao gio hang thanh cong");
+}

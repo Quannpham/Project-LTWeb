@@ -16,47 +16,11 @@
 
 <body>
     <?php
-    $price = 0;
-    $name;
-    $discount;
-    $image;
-    $idProduct;
+    $discount = 0;
+    $totalOfTotal = 0;
     session_start();
+
     require_once(__DIR__ . "/../admin/config.php");
-    if (isset($_GET['id'])) {
-        $id = $_GET['id'];
-        echo $id;
-        $query = "SELECT * FROM qls WHERE id=$id";
-        $products = array();
-        $stmt = $conn->prepare($query);
-        $stmt->execute();
-        $rs = $stmt->get_result();
-        while ($row = $rs->fetch_assoc()) {
-            $products[] = $row;
-        }
-        $name = "";
-        $discount = "";
-        $image = "";
-        $idProduct = "";
-
-        foreach ($products as $i) {
-            $name = $i["name"];
-            $discount = $i["discount"];
-            $image = $i["images"];
-            $idProduct = $i["id"];
-        }
-    }
-
-    $prices = $price;
-    $number = $_POST["number"];
-    if (isset($_POST["increase"])) {
-        $number++;
-    }
-    if (isset($_POST["decrease"])) {
-        $number--;
-    }
-    $total = $prices * $number;
-    $sql = "INSERT INTO cart (name, quantity, total, image, id, discount) values ($name,$quantity, $total, $image, $id, $discount)";
 
     ?>
     <section id="header">
@@ -67,7 +31,6 @@
                 <li><a href="shop.php">Shop</li>
                 <li><a href="blog.php">Blog</a></li>
                 <li><a href="contact.php">Contact</a></li>
-                <li><a class="active" href="cart.php"><i class="fa-solid fa-cart-shopping"></i></a></li>
             </ul>
         </div>
     </section>
@@ -81,30 +44,37 @@
         <table style="width: 100%;">
             <thead>
                 <tr>
-                    <td>Remove</td>
+                    <td>Id</td>
                     <td>Image</td>
-                    <td>Product</td>
+                    <td>Name</td>
                     <td>Price</td>
                     <td>Quantity</td>
-                    <td>Subtotal</td>
+                    <td>Total</td>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td><a href="#"><i class="fa-sharp fa-regular fa-circle"></i></a></td>
-                    <td><img src="../img/products/f1.jpg" alt=""></td>
-                    <td><?php echo $id ?></td>
-                    <td>
-                        <form action="" method="POST">
-                            <input value="<?php echo $discount ?>" name="discount"></input>
-                            <button name="increase">+</button>
-                            <button name="decrease">-</button>
-                            <input type="number" value="<?php echo $number ?>" name="number">
-                            <input value="<?php echo $total ?>" name="total">$</input>
-                        </form>
-                    </td>
+                <?php if (isset($_SESSION["cart"])) {
+                    $total = 0;
+                    foreach ($_SESSION["cart"] as $key => $i) {
+                        $total = $i["price"] * $i["quantity"];
+                        $totalOfTotal += $total;
+                ?>
+                        <form action="" method="POST" onclick="preventForm(event)">
+                            <tr>
+                                <td><?= $i["id"] ?></td>
+                                <td><img src="../img/<?= $i["image"] ?>" alt=""></td>
+                                <td><?= $i["name"] ?></td>
+                                <td><?= $i["price"] ?></td>
+                                <td><?= $i["quantity"] ?></td>
+                                <td><?= $total ?></td>
+                                <td>
+                                    <a href="delete-cart.php?id=<?= $key ?>" class="delete-cart"><i class="fa-solid fa-xmark"></i></a>
+                                </td>
 
-                </tr>
+                            </tr>
+                    <?php
+                    }
+                } ?>
             </tbody>
         </table>
     </section>
@@ -122,7 +92,7 @@
             <table>
                 <tr>
                     <td>Cart Subtotal</td>
-                    <td>$999</td>
+                    <td>No coupon</td>
                 </tr>
                 <tr>
                     <td>Shipping</td>
@@ -130,10 +100,12 @@
                 </tr>
                 <tr>
                     <td><strong>Total</strong></td>
-                    <td>$999</td>
+                    <td><?php echo  $totalOfTotal ?></td>
                 </tr>
             </table>
             <button class="normal">Proceed to checkout</button>
+
+            </form>
         </div>
     </section>
 

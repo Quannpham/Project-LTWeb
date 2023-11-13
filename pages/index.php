@@ -20,6 +20,7 @@
     <?php
     require_once(__DIR__ . "/../admin/config.php");
     $query = "SELECT * FROM qls";
+    session_start();
     $products = array();
     $stmt = $conn->prepare($query);
     $stmt->execute();
@@ -95,17 +96,19 @@
                         <div class="des">
                             <span><?php echo $i["brand"] ?></span>
                             <h5><?php echo $i["name"] ?></h5>
-                            <div class="star">
-                                <i class="fas fa-star" style="color:darkgoldenrod"></i>
+                            <div class="star" style="text-decoration: none">
+                                <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                             </div>
-                            <h4><?php echo $i["price"] ?><strong>$</strong></h4>
+                            <h4 class="price"><?php echo $i["price"] ?><strong>$</strong></h4>
                             <h4><?php echo $i["discount"] ?><strong>$</strong></h4>
                         </div>
-                        <a href="cart.php?id=<?php echo ($i["id"]) ?>"><i class="fas fa-shopping-cart cart"></i></a>
+                        <form action="" onclick="preventForm()">
+                            <a href="add-to-cart.php?id=<?php echo ($i["id"]) ?>" ><i class="fas fa-shopping-cart cart"></i></a>
+                        </form>
                     </div>
                 </a>
             <?php } ?>

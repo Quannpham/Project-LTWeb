@@ -64,11 +64,10 @@
         ?>
             <div class="single-pro-image">
                 <img src="../img/<?php echo $i["images"] ?>" width="100%" id="MainImg" alt="">
-
             </div>
 
             <div class="single-pro-details">
-                <h6><?php echo $i["brand"] ?></h6>
+                <h5><?php echo $i["brand"] ?></h5>
                 <h4><?php echo $i["name"] ?></h4>
 
                 <select>
@@ -80,12 +79,30 @@
                     <option>XXL</option>
                 </select>
                 <form action="" method="POST">
-                    <input value="<?php echo $i["price"] ?>" name="price">$</input>
-                    <input type="text" name="discount" value="<?php echo $i["discount"] ?>" />$
-                    <input type="number" value="<?php echo $number ?>" name="number">
-                    <input type="text" name="total" value="<?php echo $total ?>">
-                    <button type="submit" name="increase">cong</button>
-                    <button name="addToCart" class="normal">Add to Cart</button>
+                    <div>
+                        <label for="">Gia:</label>
+                        <input class="normal-price" value="<?php echo $i["price"] ?>" name="price">$</input>
+                    </div>
+                    <div>
+                        <label for="">Giam gia:</label>
+                        <input class="discount-price" type="text" name="discount" value="<?php echo $i["discount"] ?>" />$
+                    </div>
+                    <div>
+                        <label for="">So luong:</label>
+                        <input class="quantity" type="number" value="<?php echo $number ?>" name="number">
+                    </div>
+                    <div>
+                        <label for="">Tong tien:</label>
+                        <input class="total-price" type="text" name="total" value="<?php echo $total ?>">$
+                    </div>
+                    <div class="btn-plus-mim">
+                        <button type="submit" name="increase" class="increase">Them</button>
+                        <button type="submit" name="decrease" class="decrease">Xoa</button>
+                    </div>
+                    <a href="add-to-cart.php?id=<?php echo ($i["id"]) ?>" style="text-decoration:none">
+                        <p name="addToCart" class="add-to-cart">Add to Cart</p>
+                    </a>
+
                 </form>
 
                 <h4>Product Detail</h4>

@@ -821,6 +821,9 @@ footer a:hover {
 .price{
   text-decoration: line-through !important;
 }
+.coming-up{
+  text-decoration: none;
+}
 
 /* product pages */
 .normal-price{

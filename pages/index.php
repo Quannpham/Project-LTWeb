@@ -83,19 +83,19 @@
         <button class="normal">Explore More</button>
     </section>
 
-    <section id="product1" class="section-p1">
+    <!-- <section id="product1" class="section-p1">
         <h2>New Arrivals</h2>
         <p>Summer Collection New Morden Design</p>
         <div class="pro-container">
-            <?php
+            <php
             foreach ($products as $i) {
             ?>
-                <a href="product.php?id=<?php echo ($i["id"]) ?>">
+                <a href="product.php?id=<php echo ($i["id"]) ?>">
                     <div class="pro">
-                        <img src="../img/<?php echo $i["images"] ?>" alt="" />
+                        <img src="../img/<php echo $i["images"] ?>" alt="" />
                         <div class="des">
-                            <span><?php echo $i["brand"] ?></span>
-                            <h5><?php echo $i["name"] ?></h5>
+                            <span><php echo $i["brand"] ?></span>
+                            <h5><php echo $i["name"] ?></h5>
                             <div class="star" style="text-decoration: none">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -103,15 +103,142 @@
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                             </div>
-                            <h4 class="price"><?php echo $i["price"] ?><strong>$</strong></h4>
-                            <h4><?php echo $i["discount"] ?><strong>$</strong></h4>
+                            <h4 class="price"><php echo $i["price"] ?><strong>$</strong></h4>
+                            <h4><php echo $i["discount"] ?><strong>$</strong></h4>
                         </div>
                         <form action="" onclick="preventForm()">
-                            <a href="add-to-cart.php?id=<?php echo ($i["id"]) ?>" ><i class="fas fa-shopping-cart cart"></i></a>
+                            <a href="add-to-cart.php?id=<php echo ($i["id"]) ?>"><i class="fas fa-shopping-cart cart"></i></a>
                         </form>
                     </div>
                 </a>
-            <?php } ?>
+            <php } ?>
+        </div>
+    </section> -->
+
+    <section id="product1" class="section-p1">
+        <h2>New Arrivals</h2>
+        <p>Summer Collection New Morden Design</p>
+        <div class="pro-container">
+            <div class="pro">
+                <img src="../img/about/a1.png" width="170px" height="240px" alt="" />
+                <div class="des">
+                    <span>NXB Nguyễn Kim</span>
+                    <h5>Cuộc đời</h5>
+                    <div class="star" style="text-decoration: none">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4 class="coming-up">Dự kiến: <strong>27/03/2024</strong></h4>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="../img/about/a2.jpg" width="170px" height="240px" alt="" />
+                <div class="des">
+                    <span>NXB Nguyễn Kim</span>
+                    <h5>Cuộc đời</h5>
+                    <div class="star" style="text-decoration: none">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4 class="coming-up">Dự kiến: <strong>27/03/2024</strong></h4>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="../img/about/a3.png" width="170px" height="240px" alt="" />
+                <div class="des">
+                    <span>NXB Nguyễn Kim</span>
+                    <h5>Cuộc đời</h5>
+                    <div class="star" style="text-decoration: none">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4 class="coming-up">Dự kiến: <strong>27/03/2024</strong></h4>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="../img/about/a4.png" width="170px" height="240px" alt="" />
+                <div class="des">
+                    <span>NXB Nguyễn Kim</span>
+                    <h5>Cuộc đời</h5>
+                    <div class="star" style="text-decoration: none">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4 class="coming-up">Dự kiến: <strong>27/03/2024</strong></h4>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="../img/about/a5.jpg" width="170px" height="240px" alt="" />
+                <div class="des">
+                    <span>NXB Nguyễn Kim</span>
+                    <h5>Cuộc đời</h5>
+                    <div class="star" style="text-decoration: none">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4 class="coming-up">Dự kiến: <strong>27/03/2024</strong></h4>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="../img/about/a6.jpg" width="170px" height="240px" alt="" />
+                <div class="des">
+                    <span>NXB Nguyễn Kim</span>
+                    <h5>Cuộc đời</h5>
+                    <div class="star" style="text-decoration: none">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4 class="coming-up">Dự kiến: <strong>27/03/2024</strong></h4>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="../img/about/a1.png" width="170px" height="240px" alt="" />
+                <div class="des">
+                    <span>NXB Nguyễn Kim</span>
+                    <h5>Cuộc đời</h5>
+                    <div class="star" style="text-decoration: none">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4 class="coming-up">Dự kiến: <strong>27/03/2024</strong></h4>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="../img/about/a2.jpg" width="170px" height="240px" alt="" />
+                <div class="des">
+                    <span>NXB Nguyễn Kim</span>
+                    <h5>Cuộc đời</h5>
+                    <div class="star" style="text-decoration: none">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4 class="coming-up">Dự kiến: <strong>27/03/2024</strong></h4>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -130,20 +257,23 @@
         </div>
     </section>
 
-    <section id="banner3">
-        <div class="banner-box">
-            <h2>SEASONAL SALE</h2>
-            <h3>Winter Collection -50% OFF</h3>
-        </div>
-        <div class="banner-box banner-box2">
-            <h2>NEW FOOTWEAR COLLECTION</h2>
-            <h3>Spring/Summer 2023</h3>
-        </div>
-        <div class="banner-box banner-box3">
-            <h2>T-SHIRTS</h2>
-            <h3>New Trendy Prints</h3>
-        </div>
-    </section>
+    <a href="shop.php">
+        <section id="banner3">
+            <div class="banner-box">
+                <h2>SEASONAL SALE</h2>
+                <h3>Winter Collection -50% OFF</h3>
+            </div>
+            <div class="banner-box banner-box2">
+                <h2>NEW FOOTWEAR COLLECTION</h2>
+                <h3>Spring/Summer 2023</h3>
+            </div>
+            <div class="banner-box banner-box3">
+                <h2>T-SHIRTS</h2>
+                <h3>New Trendy Prints</h3>
+            </div>
+        </section>
+    </a>
+
 
     <section id="newsletter" class="section-p1 section-m1">
         <div class="newstext">

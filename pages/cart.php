@@ -56,7 +56,7 @@
                 <?php if (isset($_SESSION["cart"])) {
                     $total = 0;
                     foreach ($_SESSION["cart"] as $key => $i) {
-                        $total = $i["price"] * $i["quantity"];
+                        $total = $i["discount"] * $i["quantity"];
                         $totalOfTotal += $total;
                 ?>
                         <form action="" method="POST" onclick="preventForm(event)">
@@ -64,7 +64,7 @@
                                 <td><?= $i["id"] ?></td>
                                 <td><img src="../img/<?= $i["image"] ?>" alt=""></td>
                                 <td><?= $i["name"] ?></td>
-                                <td><?= $i["price"] ?></td>
+                                <td><?= $i["discount"] ?></td>
                                 <td><?= $i["quantity"] ?></td>
                                 <td><?= $total ?></td>
                                 <td>

@@ -591,7 +591,7 @@ footer a:hover {
 }
 
 #prodetails .single-pro-details input{
-  width: 50px;
+  width: 100px;
   height: 45px;
   padding-left: 10px;
   font-size: 16px;
@@ -610,7 +610,6 @@ footer a:hover {
 #prodetails .single-pro-details span{
   line-height: 25px;
 }
-
 
 /* Blog Page */
 #page-header{
@@ -815,6 +814,7 @@ footer a:hover {
   border: 1px solid #e2e9e1;
   padding: 10px;
   font-size: 14px;
+  padding-right:90px;
 }
 
 .fa-star{
@@ -839,7 +839,7 @@ footer a:hover {
   border-style:none;
 }
 .total-price{
-  width: 90px;
+  width: 100px;
   border-style: none;
 }
 .increase,.decrease{

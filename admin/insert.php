@@ -19,6 +19,12 @@
     $filename = "";
     $brand = "";
     $discount = "";
+    $page = "";
+    $author = "";
+    $soldout = "";
+    $date = "";
+    $gam = "";
+    $status = "";
 
     if (isset($_POST["submit"])) {
         $filename = $_FILES["uploadFile"]["name"];
@@ -30,8 +36,14 @@
         $description = $_POST["description"];
         $brand = $_POST["brand"];
         $discount = $_POST["discount"];
+        $page = $_POST["page"];
+        $author = $_POST["author"];
+        $soldout = $_POST["soldout"];
+        $date = $_POST["date"];
+        $gam = $_POST["gam"];
+        $status = $_POST["status"];
 
-        $sql = "INSERT INTO qls (name,price,description,images,brand,discount) VALUES ('$name','$price','$description','$filename','$brand','$discount')";
+        $sql = "INSERT INTO qls (name,price,description,images,brand,discount,page,author,soldout,date,gam,status) VALUES ('$name','$price','$description','$filename','$brand','$discount','$page','$author','$soldout','$date','$gam','$status')";
         mysqli_query($conn, $sql);
         if (move_uploaded_file($tempname, $folder)) {
             echo "<script>alert('Product uploaded successfully!');</script>";
@@ -45,13 +57,17 @@
             <h3>Thêm một sản phẩm</h3>
             <form action="" method="POST" enctype="multipart/form-data" class="mr-10 ml-10">
                 <div class="row">
-                    <div class="col-6 mb-3 gap-3 ml-10">
-                        <div>
-                            <label class="form-label">
-                                Nhập tên
-                            </label>
-                            <input class="form-control pd-l-3 pd-r-3" name="name" value="<?php echo $name ?>" />
-                        </div>
+                    <div class="col-6 mb-3">
+                        <label class="form-label">
+                            Nhập tên sách
+                        </label>
+                        <input class="form-control pd-l-3 pd-r-3" name="name" value="<?php echo $name ?>" />
+                    </div>
+                    <div class="col-6 mb-3">
+                        <label class="form-label">
+                            Tên tác giả
+                        </label>
+                        <input class="form-control" type="text" name="author" value="<?php echo $author ?>" />
                     </div>
                     <div class="col-6 mb-3">
                         <label class="form-label">
@@ -73,9 +89,40 @@
                     </div>
                     <div class="col-6 mb-3">
                         <label class="form-label">
-                            Khuyến mại
+                            Khuyến mãi
                         </label>
                         <input class="form-control" type="text" name="discount" value="<?php echo $discount ?>" />
+                    </div>
+                    <div class="col-6 mb-3">
+                        <label class="form-label">
+                            Số trang
+                        </label>
+                        <input class="form-control" type="text" name="page" value="<?php echo $page ?>" />
+                    </div>
+
+                    <div class="col-6 mb-3">
+                        <label class="form-label">
+                            Sách đã bán
+                        </label>
+                        <input class="form-control" type="text" name="soldout" value="<?php echo $soldout ?>" />
+                    </div>
+                    <div class="col-6 mb-3">
+                        <label class="form-label">
+                            Năm xuất bản
+                        </label>
+                        <input class="form-control" type="text" name="date" value="<?php echo $date ?>" />
+                    </div>
+                    <div class="col-6 mb-3">
+                        <label class="form-label">
+                            Trọng lượng
+                        </label>
+                        <input class="form-control" type="text" name="gam" value="<?php echo $gam ?>" />
+                    </div>
+                    <div class="col-6 mb-3">
+                        <label class="form-label">
+                            Tình trạng
+                        </label>
+                        <input class="form-control" type="text" name="status" value="<?php echo $status ?>" />
                     </div>
                     <div class="col-6 mb-3">
                         <label class="form-label">
@@ -87,13 +134,6 @@
                 <button class="btn btn-primary mt-3" type="submit" name="submit">
                     Thêm sản phẩm
                 </button>
-                <button class="btn btn-success mt-3 ml-10" type="submit" name="edit">
-                    Sửa sản phẩm
-                </button>
-                <button class="btn btn-danger mt-3 ml-10" type="submit" name="delete">
-                    Xóa sản phẩm
-                </button>
-                <br />
             </form>
         </div>
     </div>

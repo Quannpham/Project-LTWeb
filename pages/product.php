@@ -67,46 +67,74 @@
             </div>
 
             <div class="single-pro-details">
-                <h5><?php echo $i["brand"] ?></h5>
-                <h4><?php echo $i["name"] ?></h4>
-
-                <select>
-                    <option>Select size</option>
-                    <option>S</option>
-                    <option>M</option>
-                    <option>L</option>
-                    <option>XL</option>
-                    <option>XXL</option>
-                </select>
-                <form action="" method="POST">
-                    <div>
-                        <label for="">Gia:</label>
-                        <input class="normal-price" value="<?php echo $i["price"] ?>" name="price">$</input>
-                    </div>
-                    <div>
-                        <label for="">Giam gia:</label>
-                        <input class="discount-price" type="text" name="discount" value="<?php echo $i["discount"] ?>" />$
-                    </div>
-                    <div>
-                        <label for="">So luong:</label>
-                        <input class="quantity" type="number" value="<?php echo $number ?>" name="number">
-                    </div>
-                    <div>
-                        <label for="">Tong tien:</label>
-                        <input class="total-price" type="text" name="total" value="<?php echo $total ?>">$
-                    </div>
-                    <div class="btn-plus-mim">
-                        <button type="submit" name="increase" class="increase">Them</button>
-                        <button type="submit" name="decrease" class="decrease">Xoa</button>
-                    </div>
-                    <a href="add-to-cart.php?id=<?php echo ($i["id"]) ?>" style="text-decoration:none">
-                        <p name="addToCart" class="add-to-cart">Add to Cart</p>
-                    </a>
+                <div id="subtotal" class="subtotal" style="border-style:none">
+                    <form action="" method="POST">
+                        <table style="width:100%">
+                            <tr>
+                                <td style="padding-right: 20px;">Thương hiệu</td>
+                                <td><?php echo $i["brand"] ?></td>
+                            </tr>
+                            <tr>
+                                <td>Tên tác giả</td>
+                                <td><?php echo $i["name"] ?></td>
+                            </tr>
+                            <tr>
+                                <td>Tên sách</td>
+                                <td><?php echo $i["author"] ?></td>
+                            </tr>
+                            <tr>
+                                <td>Giá gốc</td>
+                                <td><input class="normal-price" value="<?php echo $i["price"] ?>" name="price"> VND</input></td>
+                            </tr>
+                            <tr>
+                                <td>Khuyến mãi</td>
+                                <td><input class="discount-price" type="text" name="discount" value="<?php echo $i["discount"] ?>" /> VND
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Số trang</td>
+                                <td><?php echo $i["page"] ?></td>
+                            </tr>
+                            <tr>
+                                <td>Đã bán</td>
+                                <td><?php echo $i["soldout"] ?></td>
+                            </tr>
+                            <tr>
+                                <td>Năm xuất bản</td>
+                                <td><?php echo $i["date"] ?></td>
+                            </tr>
+                            <tr>
+                                <td>Trọng lượng</td>
+                                <td><?php echo $i["gam"] ?></td>
+                            </tr>
+                            <tr>
+                                <td>Tình trạng</td>
+                                <td><?php echo $i["status"] ?></td>
+                            </tr>
+                            <tr>
+                                <td>Số lượng</td>
+                                <td><input class="quantity" type="number" value="<?php echo $number ?>" name="number">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Tổng tiền</td>
+                                <td><input class="total-price" type="text" name="total" value="<?php echo $total ?>"> VND
+                                </td>
+                            </tr>
+                        </table>
+                </div>
+                <div class="btn-plus-mim" style="margin-left:20px">
+                    <button type="submit" name="increase" class="increase">Thêm</button>
+                    <button type="submit" name="decrease" class="decrease">Xóa</button>
+                </div>
+                <a href="add-to-cart.php?id=<?php echo ($i["id"]) ?>" style="text-decoration:none">
+                    <p name="addToCart" style="margin-left:20px">Thêm vào giỏ hàng</p>
+                </a>
 
                 </form>
 
-                <h4>Product Detail</h4>
-                <span><?php echo $i["description"] ?></span>
+                <h4 style="margin-left:20px">Tóm tắt</h4>
+                <span style="margin-left:20px"><?php echo $i["description"] ?></span>
             </div>
         <?php } ?>
     </section>

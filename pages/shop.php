@@ -61,8 +61,8 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4><?php echo $i["price"]?><strong>$</strong></h4>
-                    <h4 style="text-decoration: line-through;"><?php echo $i["discount"]?><strong>$</strong></h4>
+                    <h4><?php echo $i["price"]?><strong> VND</strong></h4>
+                    <h4 style="text-decoration: line-through;"><?php echo $i["discount"]?><strong> VND</strong></h4>
                 </div>
                 <a href="cart.php?id=<?php echo($i["id"])?>"><i class="fas fa-shopping-cart cart"></i></a>
             </div>

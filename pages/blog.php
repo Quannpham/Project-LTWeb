@@ -34,7 +34,7 @@
     <section id="blog">
         <div class="blog-box">
             <div class="blog-img">
-                <img src="../img/blog/b1.jpg" alt="">
+                <img src="../img/blog/blog-a1.jpg" alt="">
             </div>
             <div class="blog-details">
                 <h4>The Cotton-Jersey Zip-Up Hoodie</h4>
@@ -54,12 +54,12 @@
                     <a href="#">CONTINUE READING</a>
             </div>
             <div class="blog-img">
-                <img src="../img/blog/b2.jpg" alt="">
+                <img src="../img/blog/blog-a2.jpg" alt="">
             </div>
         </div>
         <div class="blog-box">
             <div class="blog-img">
-                <img src="../img/blog/b3.jpg" alt="">
+                <img src="../img/blog/blog-a3.jpg" alt="">
             </div>
             <div class="blog-details">
                 <h4>The Cotton-Jersey Zip-Up Hoodie</h4>
@@ -82,7 +82,7 @@
                     <a href="#">CONTINUE READING</a>
             </div>
             <div class="blog-img">
-                <img src="../img/blog/b4.jpg" alt="">
+                <img src="../img/blog/blog-a4.jpg" alt="">
             </div>
         </div>
     </section>

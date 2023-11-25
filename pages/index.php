@@ -83,44 +83,13 @@
         <button class="normal">Explore More</button>
     </section>
 
-    <!-- <section id="product1" class="section-p1">
-        <h2>New Arrivals</h2>
-        <p>Summer Collection New Morden Design</p>
-        <div class="pro-container">
-            <php
-            foreach ($products as $i) {
-            ?>
-                <a href="product.php?id=<php echo ($i["id"]) ?>">
-                    <div class="pro">
-                        <img src="../img/<php echo $i["images"] ?>" alt="" />
-                        <div class="des">
-                            <span><php echo $i["brand"] ?></span>
-                            <h5><php echo $i["name"] ?></h5>
-                            <div class="star" style="text-decoration: none">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <h4 class="price"><php echo $i["price"] ?><strong>$</strong></h4>
-                            <h4><php echo $i["discount"] ?><strong>$</strong></h4>
-                        </div>
-                        <form action="" onclick="preventForm()">
-                            <a href="add-to-cart.php?id=<php echo ($i["id"]) ?>"><i class="fas fa-shopping-cart cart"></i></a>
-                        </form>
-                    </div>
-                </a>
-            <php } ?>
-        </div>
-    </section> -->
 
     <section id="product1" class="section-p1">
         <h2>New Arrivals</h2>
         <p>Summer Collection New Morden Design</p>
         <div class="pro-container">
             <div class="pro">
-                <img src="../img/about/a1.png" width="170px" height="240px" alt="" />
+                <img src="../img/home/home-a1.jpg" width="170px" height="240px" alt="" />
                 <div class="des">
                     <span>NXB Nguyễn Kim</span>
                     <h5>Cuộc đời</h5>
@@ -135,7 +104,7 @@
                 </div>
             </div>
             <div class="pro">
-                <img src="../img/about/a2.jpg" width="170px" height="240px" alt="" />
+                <img src="../img/home/home-a2.jpg" width="170px" height="240px" alt="" />
                 <div class="des">
                     <span>NXB Nguyễn Kim</span>
                     <h5>Cuộc đời</h5>
@@ -150,7 +119,7 @@
                 </div>
             </div>
             <div class="pro">
-                <img src="../img/about/a3.png" width="170px" height="240px" alt="" />
+                <img src="../img/home/home-a3.jpg" width="170px" height="240px" alt="" />
                 <div class="des">
                     <span>NXB Nguyễn Kim</span>
                     <h5>Cuộc đời</h5>
@@ -165,7 +134,7 @@
                 </div>
             </div>
             <div class="pro">
-                <img src="../img/about/a4.png" width="170px" height="240px" alt="" />
+                <img src="../img/home/home-a4.jpg" width="170px" height="240px" alt="" />
                 <div class="des">
                     <span>NXB Nguyễn Kim</span>
                     <h5>Cuộc đời</h5>
@@ -180,7 +149,7 @@
                 </div>
             </div>
             <div class="pro">
-                <img src="../img/about/a5.jpg" width="170px" height="240px" alt="" />
+                <img src="../img/home/home-a5.jpg" width="170px" height="240px" alt="" />
                 <div class="des">
                     <span>NXB Nguyễn Kim</span>
                     <h5>Cuộc đời</h5>
@@ -195,7 +164,7 @@
                 </div>
             </div>
             <div class="pro">
-                <img src="../img/about/a6.jpg" width="170px" height="240px" alt="" />
+                <img src="../img/home/home-a6.jpg" width="170px" height="240px" alt="" />
                 <div class="des">
                     <span>NXB Nguyễn Kim</span>
                     <h5>Cuộc đời</h5>
@@ -210,7 +179,7 @@
                 </div>
             </div>
             <div class="pro">
-                <img src="../img/about/a1.png" width="170px" height="240px" alt="" />
+                <img src="../img/home/home-a7.jpg" width="170px" height="240px" alt="" />
                 <div class="des">
                     <span>NXB Nguyễn Kim</span>
                     <h5>Cuộc đời</h5>
@@ -225,7 +194,7 @@
                 </div>
             </div>
             <div class="pro">
-                <img src="../img/about/a2.jpg" width="170px" height="240px" alt="" />
+                <img src="../img/home/home-a8.jpg" width="170px" height="240px" alt="" />
                 <div class="des">
                     <span>NXB Nguyễn Kim</span>
                     <h5>Cuộc đời</h5>

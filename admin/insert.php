@@ -39,68 +39,6 @@
             echo "<script>alert('Product uploaded falied!');</script>";
         }
     }
-
-    if (isset($_POST["edit"]) && isset($_POST["update"])) {
-        echo '<form action="" method="POST">';
-        echo 'Nhập ID ảnh cần sửa: <input type="text" name="edit_id">';
-        echo '<input type="submit" name="edit" value="Sửa">';
-        echo '</form>';
-    }
-
-
-    if (isset($_POST["edit"])) {
-        $editId = $_POST["edit_id"];
-
-        $sql = "SELECT * FROM qls WHERE id = '$editId'";
-        $result = mysqli_query($conn, $sql);
-
-        if (mysqli_num_rows($result) > 0) {
-            $row = mysqli_fetch_assoc($result);
-            $name = $row["name"];
-            $price = $row["price"];
-            $description = $row["description"];
-            $brand = $row["brand"];
-            $discount = $row["discount"];
-            $filename = $row["images"];
-
-            echo '<form action="" method="POST">';
-            echo 'ID ảnh: <input type="text" name="update_id" value="' . $editId . '" readonly><br>';
-            echo 'Tên ảnh: <input type="text" name="name" value="' . $name . '"><br>';
-            echo 'Giá: <input type="text" name="price" value="' . $price . '"><br>';
-            echo 'Mô tả: <textarea name="description">' . $description . '</textarea><br>';
-            echo 'Thương hiệu: <input type="text" name="brand" value="' . $brand . '"><br>';
-            echo 'Khuyến mại:<input type="text" name="discount" value=' . $discount . '"><br>';
-            echo '<input type="submit" name="update" value="Cập nhật">';
-            echo '</form>';
-        } else {
-            echo "Không tìm thấy ảnh với ID đã nhập.";
-        }
-    }
-
-    // Cập nhật thông tin ảnh trong cơ sở dữ liệu khi biểu mẫu sửa được gửi đi
-    if (isset($_POST["update"])) {
-        $updateId = $_POST["update_id"];
-        $name = $_POST["name"];
-        $price = $_POST["price"];
-        $description = $_POST["description"];
-        $brand = $_POST["brand"];
-        $discount = $_POST["discount"];
-
-        // Cập nhật thông tin ảnh trong cơ sở dữ liệu
-        $sql = "UPDATE qls SET name='$name', price='$price', description='$description', brand='$brand', discount='$discount' WHERE id='$updateId'";
-        mysqli_query($conn, $sql);
-
-        echo "<script>alert('Thông tin ảnh đã được cập nhật thành công!');</script>";
-    }
-
-    if (isset($_POST["delete"])) {
-        $id = $_POST["delete"];
-
-        $sql = "DELETE FROM qls WHERE id='$id'";
-        mysqli_query($conn, $sql);
-
-        echo "<script>alert('Product deleted successfully!');</script>";
-    }
     ?>
     <div class="container">
         <div class="manager my-3">

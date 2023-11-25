@@ -143,7 +143,8 @@
             <img src="../img/pay/pay.png" alt="">
         </div>
         <div class="copyright">
-            <p>@PhamMinhQuan @NguyenManhQuan @NguyenThanhTong @MaiMinhTan</p>
+            <p>Phạm Minh Quân</p>
+            <p>Nguyễn Mạnh Quân</p>
         </div>
     </footer>
 

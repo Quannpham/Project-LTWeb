@@ -29,6 +29,7 @@
         $products[] = $row;
     }
     ?>
+    
     <section id="header">
         <a href="#"><img src="../img/logo.png" class="logo" alt="anh logo" /></a>
         <div>
@@ -100,7 +101,7 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4 class="coming-up">Dự kiến: <strong>27/03/2024</strong></h4>
+                    <h4 class="coming-up">Dự kiến: <strong>21/03/2024</strong></h4>
                 </div>
             </div>
             <div class="pro">
@@ -115,7 +116,7 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4 class="coming-up">Dự kiến: <strong>27/03/2024</strong></h4>
+                    <h4 class="coming-up">Dự kiến: <strong>27/07/2024</strong></h4>
                 </div>
             </div>
             <div class="pro">
@@ -130,7 +131,7 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4 class="coming-up">Dự kiến: <strong>27/03/2024</strong></h4>
+                    <h4 class="coming-up">Dự kiến: <strong>11/01/2024</strong></h4>
                 </div>
             </div>
             <div class="pro">
@@ -145,7 +146,7 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4 class="coming-up">Dự kiến: <strong>27/03/2024</strong></h4>
+                    <h4 class="coming-up">Dự kiến: <strong>12/12/2024</strong></h4>
                 </div>
             </div>
             <div class="pro">
@@ -160,7 +161,7 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4 class="coming-up">Dự kiến: <strong>27/03/2024</strong></h4>
+                    <h4 class="coming-up">Dự kiến: <strong>27/05/2024</strong></h4>
                 </div>
             </div>
             <div class="pro">
@@ -175,7 +176,7 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4 class="coming-up">Dự kiến: <strong>27/03/2024</strong></h4>
+                    <h4 class="coming-up">Dự kiến: <strong>27/09/2024</strong></h4>
                 </div>
             </div>
             <div class="pro">
@@ -190,7 +191,7 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4 class="coming-up">Dự kiến: <strong>27/03/2024</strong></h4>
+                    <h4 class="coming-up">Dự kiến: <strong>12/03/2024</strong></h4>
                 </div>
             </div>
             <div class="pro">
@@ -205,40 +206,43 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4 class="coming-up">Dự kiến: <strong>27/03/2024</strong></h4>
+                    <h4 class="coming-up">Dự kiến: <strong>31/09/2024</strong></h4>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="sm-banner" class="section-p1">
-        <div class="banner-box">
-            <h4>crazy deals</h4>
-            <h2>buy 1 get 1 free</h2>
-            <span>The best classic dress is on sale at cara</span>
-            <button class="white">Learn more</button>
-        </div>
-        <div class="banner-box banner-box2">
-            <h4>Spring/Summer</h4>
-            <h2>upcomming season</h2>
-            <span>The best classic dress is on sale at cara</span>
-            <button class="white">Colletion</button>
-        </div>
-    </section>
-
-    <a href="shop.php">
-        <section id="banner3">
+    <a href="shop.php" style="text-decoration:none">
+        <section id="sm-banner" class="section-p1">
             <div class="banner-box">
-                <h2>SEASONAL SALE</h2>
-                <h3>Winter Collection -50% OFF</h3>
+                <h4>crazy deals</h4>
+                <h2>buy 1 get 1 free</h2>
+                <span>The best classic dress is on sale at cara</span>
+                <button class="white">Learn more</button>
             </div>
             <div class="banner-box banner-box2">
-                <h2>NEW FOOTWEAR COLLECTION</h2>
-                <h3>Spring/Summer 2023</h3>
+                <h4">Spring/Summer</h4>
+                    <h2>upcomming season</h2>
+                    <span>The best classic dress is on sale at cara</span>
+                    <button class="white">Colletion</button>
+            </div>
+        </section>
+    </a>
+
+
+    <a href="shop.php" style="text-decoration: none">
+        <section id="banner3">
+            <div class="banner-box">
+                <h2>Sale</h2>
+                <h3>Collection -50% OFF</h3>
+            </div>
+            <div class="banner-box banner-box2">
+                <h2>Super SALE</h2>
+                <h3>Back to School -70% OFF</h3>
             </div>
             <div class="banner-box banner-box3">
-                <h2>T-SHIRTS</h2>
-                <h3>New Trendy Prints</h3>
+                <h2>New Arrival</h2>
+                <h3>Up to sale -30% OFF</h3>
             </div>
         </section>
     </a>
@@ -300,7 +304,8 @@
             <img src="../img/pay/pay.png" alt="">
         </div>
         <div class="copyright">
-            <p>@PhamMinhQuan @NguyenManhQuan @NguyenThanhTong @MaiMinhTan</p>
+            <p>Phạm Minh Quân</p>
+            <p>Nguyễn Mạnh Quân</p>
         </div>
     </footer>
 

@@ -93,7 +93,7 @@
                 <img src="../img/home/home-a1.jpg" width="170px" height="240px" alt="" />
                 <div class="des">
                     <span>NXB Nguyễn Kim</span>
-                    <h5>Cuộc đời</h5>
+                    <h5>Nhìn thấy vạn vật</h5>
                     <div class="star" style="text-decoration: none">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -108,7 +108,7 @@
                 <img src="../img/home/home-a2.jpg" width="170px" height="240px" alt="" />
                 <div class="des">
                     <span>NXB Nguyễn Kim</span>
-                    <h5>Cuộc đời</h5>
+                    <h5>Trang giấy đầu</h5>
                     <div class="star" style="text-decoration: none">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -123,7 +123,7 @@
                 <img src="../img/home/home-a3.jpg" width="170px" height="240px" alt="" />
                 <div class="des">
                     <span>NXB Nguyễn Kim</span>
-                    <h5>Cuộc đời</h5>
+                    <h5>Khu vực hứng thú</h5>
                     <div class="star" style="text-decoration: none">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -138,7 +138,7 @@
                 <img src="../img/home/home-a4.jpg" width="170px" height="240px" alt="" />
                 <div class="des">
                     <span>NXB Nguyễn Kim</span>
-                    <h5>Cuộc đời</h5>
+                    <h5>Lỗi lầm trong cuộc sống</h5>
                     <div class="star" style="text-decoration: none">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -153,7 +153,7 @@
                 <img src="../img/home/home-a5.jpg" width="170px" height="240px" alt="" />
                 <div class="des">
                     <span>NXB Nguyễn Kim</span>
-                    <h5>Cuộc đời</h5>
+                    <h5>Cách viết thông tin quan trọng</h5>
                     <div class="star" style="text-decoration: none">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -168,7 +168,7 @@
                 <img src="../img/home/home-a6.jpg" width="170px" height="240px" alt="" />
                 <div class="des">
                     <span>NXB Nguyễn Kim</span>
-                    <h5>Cuộc đời</h5>
+                    <h5>Sáng tạo khi viết</h5>
                     <div class="star" style="text-decoration: none">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -183,7 +183,7 @@
                 <img src="../img/home/home-a7.jpg" width="170px" height="240px" alt="" />
                 <div class="des">
                     <span>NXB Nguyễn Kim</span>
-                    <h5>Cuộc đời</h5>
+                    <h5>Cách viết phi hư cấu</h5>
                     <div class="star" style="text-decoration: none">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -198,7 +198,7 @@
                 <img src="../img/home/home-a8.jpg" width="170px" height="240px" alt="" />
                 <div class="des">
                     <span>NXB Nguyễn Kim</span>
-                    <h5>Cuộc đời</h5>
+                    <h5>Công cụ để viết</h5>
                     <div class="star" style="text-decoration: none">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>

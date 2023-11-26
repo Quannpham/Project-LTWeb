@@ -71,15 +71,15 @@
                     <form action="" method="POST">
                         <table style="width:100%">
                             <tr>
-                                <td style="padding-right: 20px;">Thương hiệu</td>
+                                <td>Tên sách</td>
+                                <td><?php echo $i["name"] ?></td>
+                            </tr>
+                            <tr>
+                                <td>Nhà xuất bản</td>
                                 <td><?php echo $i["brand"] ?></td>
                             </tr>
                             <tr>
                                 <td>Tên tác giả</td>
-                                <td><?php echo $i["name"] ?></td>
-                            </tr>
-                            <tr>
-                                <td>Tên sách</td>
                                 <td><?php echo $i["author"] ?></td>
                             </tr>
                             <tr>
@@ -134,7 +134,7 @@
                 </form>
 
                 <h4 style="margin-left:20px">Tóm tắt</h4>
-                <span style="margin-left:20px"><?php echo $i["description"] ?></span>
+                <span style="margin-left:20px; overflow:scroll"><?php echo $i["description"] ?></span>
             </div>
         <?php } ?>
     </section>

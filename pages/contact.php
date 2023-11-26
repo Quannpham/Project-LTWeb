@@ -34,93 +34,49 @@
     <section id="contact-details" class="section-p1">
         <div class="details">
             <span>GET IN TOUCH</span>
-            <h2>Visit one of our agency locations</h2>
+            <h2>Hãy đến gặp chúng tôi tại: Đại học kinh tế Kĩ thuật công nghiệp</h2>
             <div>
                 <li>
                     <i class="fa-solid fa-building" style="font-size: 30px; font-weight: 800;"></i>
-                    <p style="font-size: 30px; font-weight: 800;">Opera House</p>
+                    <p style="font-size: 30px; font-weight: 800;">Cơ sở Lĩnh Nam</p>
                 </li>
                 <li>
                     <i class="fa-solid fa-map"></i>
-                    <p>Bennelong Point, Sydney, Australia</p>
+                    <p>ngõ 218 Lĩnh Nam</p>
                 </li>
                 <li>
                     <i class="fa-solid fa-envelope"></i>
-                    <p>quanpham@email.com</p>
+                    <p>phamminhquan@email.com</p>
                 </li>
                 <li>
                     <i class="fa-solid fa-phone-alt"></i>
-                    <p>0123456789</p>
+                    <p>0835537209</p>
                 </li>
                 <li>
                     <i class="fa-solid fa-clock"></i>
-                    <p>Monday to Sunday: 8:00 AM to 20:00 PM</p>
+                    <p>Mở cửa từ thứ 2 đến thứ 6</p>
                 </li>
             </div>
             <div>
                 <li>
                     <i class="fa-solid fa-building" style="font-size: 30px; font-weight: 800;"></i>
-                    <p style="font-size: 30px; font-weight: 800;">Big Ben</p>
+                    <p style="font-size: 30px; font-weight: 800;">Cơ sở Minh Khai</p>
                 </li>
                 <li>
                     <i class="fa-solid fa-map"></i>
-                    <p>Westminster, Manchester, England</p>
+                    <p>456 đường Minh Khai</p>
                 </li>
                 <li>
                     <i class="fa-solid fa-envelope"></i>
-                    <p>manhquan@email.com</p>
+                    <p>nguyenmanhquan@email.com</p>
                 </li>
                 <li>
                     <i class="fa-solid fa-phone-alt"></i>
-                    <p>090807060102</p>
+                    <p>0386413521</p>
                 </li>
                 <li>
                     <i class="fa-solid fa-clock"></i>
-                    <p>Monday to Sunday: 8:00 AM to 20:00 PM</p>
-                </li>
-            </div>
-            <div>
-                <li>
-                    <i class="fa-solid fa-building" style="font-size: 30px; font-weight: 800;"></i>
-                    <p style="font-size: 30px; font-weight: 800;">Buji Khalifa</p>
-                </li>
-                <li>
-                    <i class="fa-solid fa-map"></i>
-                    <p>Sheikh Mohammed bin Rashid Blvd, Downtown Dubai, UAE</p>
-                </li>
-                <li>
-                    <i class="fa-solid fa-envelope"></i>
-                    <p>thanhtong@email.com</p>
-                </li>
-                <li>
-                    <i class="fa-solid fa-phone-alt"></i>
-                    <p>038997564</p>
-                </li>
-                <li>
-                    <i class="fa-solid fa-clock"></i>
-                    <p>Monday to Sunday: 8:00 AM to 20:00 PM</p>
-                </li>
-            </div>
-            <div>
-                <li>
-                    <i class="fa-solid fa-building" style="font-size: 30px; font-weight: 800;"></i>
-                    <p style="font-size: 30px; font-weight: 800;">Shanghai Building</p>
-                </li>
-                <li>
-                    <i class="fa-solid fa-map"></i>
-                    <p>Yincheng Rd, Lujiazui, Pudong, Shanghai, China </p>
-                </li>
-                <li>
-                    <i class="fa-solid fa-envelope"></i>
-                    <p>tanmai@email.com</p>
-                </li>
-                <li>
-                    <i class="fa-solid fa-phone-alt"></i>
-                    <p>01111111111</p>
-                </li>
-                <li>
-                    <i class="fa-solid fa-clock"></i>
-                    <p>Monday to Sunday: 8:00 AM to 20:00 PM</p>
+                    <p>Mở cửa từ thứ 2 đến thứ 6</p>
                 </li>
             </div>
         </div>

@@ -83,7 +83,7 @@
                     </div>
                     <div class="col-6 mb-3">
                         <label class="form-label">
-                            Thương hiệu
+                            Nhà xuất bản
                         </label>
                         <input class="form-control" type="text" name="brand" value="<?php echo $brand ?>" />
                     </div>
